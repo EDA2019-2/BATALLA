@@ -4,15 +4,22 @@ bool Batalla(Personaje *this, Enemigo *that)
 	if(i%2==0)
 	{
 		//Turno ENEMIGO
+		//SIN MENU Elige un numero al azar de 1 a 3 y elige un ataque entre los ataques que conoce el enemigo
+		//return char Ataque Seleccionado
+		//Los daños de ataques enemigos son fijos y no tienen rnd para extender daño
+		
+		size_t daño=DLL_BuscarAtaque(that, Ataque Seleccionado)->daño;
+		this->vida=(this->vida)-daño;
+		i++;
 	}
 	else
 	{
 		//Turno JUGADOR
-		//MOSTRAR MEN�  DE ATAQUES
-		//JUGADOR ELIGE ATAQUE
+		//MOSTRAR MENÚ  DE ATAQUES
+		//JUGADOR ELIGE ATAQUE return char Ataque Seleccionado
 		
-		size_t da�o=DLL_BuscarAtaque(Personaje *this, Ataque Seleccionado)->da�o+rnd(DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->dado extra);
-		that->vida=(that->vida)-da�o;
+		size_t daño=DLL_BuscarAtaque(this, Ataque Seleccionado)->daño+rnd(DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->dado extra);
+		that->vida=(that->vida)-daño;
 		i++;
 	}
 	if(this->vida==0)
