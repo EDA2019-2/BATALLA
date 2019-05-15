@@ -17,8 +17,24 @@ bool Batalla(Personaje *this, Enemigo *that)
 		//Turno JUGADOR
 		//MOSTRAR MENÚ  DE ATAQUES
 		//JUGADOR ELIGE ATAQUE return char Ataque Seleccionado
-		
-		size_t daño=DLL_BuscarAtaque(this, Ataque Seleccionado)->daño+rnd(DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->dado extra);
+		if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='Destreza')
+		{
+			size_t tiro de dado=(rnd(101)*this->Destreza;
+		}
+		else if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='Fuerza')
+		{
+			size_t tiro de dado=(rnd(101)*this->Fuerza;
+		}
+		else if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='Inteligencia')
+		{
+			size_t tiro de dado=(rnd(101)*this->Inteligencia;
+		}
+		if(tiro de dado<that->destreza)
+		{
+			i++;
+			break;
+		}
+		size_t daño=DLL_BuscarAtaque(this, Ataque Seleccionado)->daño+rnd((DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->dado extra)+1);
 		that->vida=(that->vida)-daño;
 		i++;
 	}
