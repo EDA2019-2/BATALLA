@@ -29,7 +29,7 @@ bool Batalla(Personaje *this, Enemigo *that)
 		{
 			size_t tiro de dado=(rnd(101)*this->Inteligencia;
 		}
-		if(tiro de dado<that->destreza)
+		if(tiro de dado<70*(that->destreza))
 		{
 			i++;
 			break;
