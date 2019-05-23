@@ -8,7 +8,7 @@ bool Batalla(Personaje *this, Enemigo *that)
 		//return char Ataque Seleccionado
 		//Los daños de ataques enemigos son fijos y no tienen rnd para extender daño
 		
-		size_t daño=DLL_BuscarAtaque(that, Ataque Seleccionado)->daño;
+		size_t daño=DLL_BuscarAtaque(that, Ataque Seleccionado)->guajolocombo->daño;
 		this->vida=(this->vida)-daño;
 		i++;
 	}
@@ -17,24 +17,24 @@ bool Batalla(Personaje *this, Enemigo *that)
 		//Turno JUGADOR
 		//MOSTRAR MENÚ  DE ATAQUES
 		//JUGADOR ELIGE ATAQUE return char Ataque Seleccionado
-		if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='Destreza')
+		if(DLL_BuscarAtaque(this,Ataque Seleccionado)->guajolocombo->Habilidad=='agilidad')
 		{
-			size_t tiro de dado=(rnd(101)*this->Destreza;
+			size_t tiro de dado=(rnd(101)*this->agilidad;
 		}
-		else if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='Fuerza')
+		else if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='fuerza')
 		{
-			size_t tiro de dado=(rnd(101)*this->Fuerza;
+			size_t tiro de dado=(rnd(101)*this->fuerza;
 		}
-		else if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='Inteligencia')
+		else if(DLL_BuscarAtaque(this,Ataque Seleccionado)->Habilidad=='inteligencia')
 		{
-			size_t tiro de dado=(rnd(101)*this->Inteligencia;
+			size_t tiro de dado=(rnd(101)*this->inteligencia;
 		}
-		if(tiro de dado<70*(that->destreza))
+		if(tiro de dado<50*(that->destreza))
 		{
 			i++;
 			break;
 		}
-		size_t daño=DLL_BuscarAtaque(this, Ataque Seleccionado)->daño+rnd((DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->dado extra)+1);
+		size_t daño=DLL_BuscarAtaque(this, Ataque Seleccionado)->guajolocombo->daño+rnd((DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->guajolocombo->dado)+1);
 		that->vida=(that->vida)-daño;
 		i++;
 	}
