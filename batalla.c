@@ -36,7 +36,7 @@ bool Batalla(Personaje *this, Enemigo *that)
 			i++;
 			break;
 		}
-		size_t daño=(a->daño+rnd((DLL_BuscarAtaque(Personaje *this,Ataque Seleccionado)->guajolocombo->dado)+1);
+		size_t daño=(a->daño+rnd(a->dado)+1);
 		that->vida=(that->vida)-daño;
 		i++;
 	}
